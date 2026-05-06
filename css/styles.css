@@ -51,7 +51,7 @@
   --score-block-border: rgba(30, 64, 175, 0.22);
   --score-block-text: #1e3a8a;
   
-  --theme-page-bg-image: url("../images/header.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/header.jpg");
   
   --font-hero: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -211,7 +211,7 @@ main {
 }
 
 .hero-banner-main {
-  background-image: url("../images/header.jpg");
+  background-image: url("/diophantine_equation/images/header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -470,32 +470,32 @@ body.page-home .hero-banner-main .hero-content {
 
 
 .menu-item-bg-theory {
-  --menu-item-bg-image: url("../images/round/theory_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/theory_round.jpg");
   --menu-image-ring: #ff4ea7;
 }
 
 .menu-item-bg-linear {
-  --menu-item-bg-image: url("../images/round/linear_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/linear_round.jpg");
   --menu-image-ring: #20c000;
 }
 
 .menu-item-bg-coins {
-  --menu-item-bg-image: url("../images/round/coins_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/coins_round.jpg");
   --menu-image-ring: #22b8ee;
 }
 
 .menu-item-bg-pythagorean {
-  --menu-item-bg-image: url("../images/round/triples_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/triples_round.jpg");
   --menu-image-ring: #fb923c;
 }
 
 .menu-item-bg-squaresum {
-  --menu-item-bg-image: url("../images/round/square_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/square_round.jpg");
   --menu-image-ring: #2dd4bf;
 }
 
 .menu-item-bg-hiper {
-  --menu-item-bg-image: url("../images/round/hiper_round.jpg");
+  --menu-item-bg-image: url("/diophantine_equation/images/round/hiper_round.jpg");
   --menu-image-ring: #e7d407;
 }
 
@@ -1390,6 +1390,7 @@ canvas {
     text-align: center;
   }
 }
+
 
 
 

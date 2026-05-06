@@ -9,7 +9,7 @@ body.theme-squaresum {
   --score-block-border: rgba(0, 114, 89, 0.24);
   --score-block-text: #0f766e;
   --viz-axis-color: #00a887;
-  --theme-page-bg-image: url("../../images/banners/squareSum.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/squareSum.jpg");
   --hero-banner-bg: linear-gradient(135deg, #00594d, #007259, #00ffae);
 }
 
@@ -40,6 +40,7 @@ body.theme-squaresum {
   border-radius: 8px;
   background: var(--viz-canvas-bg);
 }
+
 
 
 

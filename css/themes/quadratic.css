@@ -74,9 +74,10 @@ body.theme-quadratic {
   --score-block-bg: linear-gradient(135deg, rgba(255, 123, 0, 0.22), rgba(119, 68, 0, 0.12));
   --score-block-border: rgba(163, 63, 2, 0.28);
   --score-block-text: #9a3412;
-  --theme-page-bg-image: url("../../images/banners/pythagorean.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/pythagorean.jpg");
   --hero-banner-bg: linear-gradient(135deg, #774400, #a33f02, #ff7b00);
 }
+
 
 
 

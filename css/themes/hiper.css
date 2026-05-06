@@ -66,7 +66,7 @@ body.theme-hiper {
   --score-block-border: rgba(163, 147, 2, 0.32);
   --score-block-text: #854d0e;
   --viz-axis-color: #a39302;
-  --theme-page-bg-image: url("../../images/banners/hiper.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/hiper.jpg");
   --hero-banner-bg: linear-gradient(135deg, #777500, #a39302, #d2cf00);
 }
 
@@ -113,6 +113,7 @@ body.theme-hiper {
   border-radius: 8px;
   background: var(--viz-canvas-bg);
 }
+
 
 
 

@@ -54,9 +54,10 @@ body.theme-theory {
   --btn-gradient: linear-gradient(to right, #cf96ca 0%, #de20d8 53%, #ba255e 100%);
   --btn-bg-fallback: #ba255e;
   --btn-shadow-rgb: 186, 37, 94;
-  --theme-page-bg-image: url("../../images/banners/theory.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/theory.jpg");
   --hero-banner-bg: linear-gradient(135deg, #ba255e, #de20d8, #cf96ca);
 }
+
 
 
 

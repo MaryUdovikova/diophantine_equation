@@ -11,7 +11,7 @@ body.theme-pythagorean {
   --pyth-canvas-fill: rgba(255, 123, 0, 0.22);
   --pyth-canvas-label: #f4f5f7;
   --pyth-range-accent: #a33f02;
-  --theme-page-bg-image: url("../../images/banners/pythagorean.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/pythagorean.jpg");
   --hero-banner-bg: linear-gradient(135deg, #774400, #a33f02, #ff7b00);
 }
 
@@ -25,6 +25,7 @@ body.theme-pythagorean input[type="range"] {
   color: var(--text);
   font-weight: 500;
 }
+
 
 
 

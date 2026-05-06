@@ -6,9 +6,10 @@ body.theme-coins {
   --score-block-bg: linear-gradient(135deg, rgba(0, 205, 255, 0.2), rgba(0, 48, 119, 0.12));
   --score-block-border: rgba(2, 98, 163, 0.26);
   --score-block-text: #0369a1;
-  --theme-page-bg-image: url("../../images/banners/coins.jpg");
+  --theme-page-bg-image: url("/diophantine_equation/images/banners/coins.jpg");
   --hero-banner-bg: linear-gradient(135deg, #003077, #0262a3, #00cdff);
 }
+
 
 
 
