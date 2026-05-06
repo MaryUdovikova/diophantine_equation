@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Текстові задачі | Вступ</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/theory.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-theory">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/linear-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Текстові задачі</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="textProblemsDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="textProblemsDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="textProblemsDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="solution linear-task-work" id="textProblemTaskPanel">
+            <div id="textProblemDisplay" class="linear-equation-display">
+              <p id="textProblemStory" style="margin: 0;"></p>
+            </div>
+
+            <div id="textProblemInputSection">
+              <div id="linearSolutionFields">
+                <label>
+                  <span class="linear-field-label-prefix" id="textProblemXLabel">x<span class="sub-idx">p</span> =</span>
+                  <input type="number" id="textProblemXp" step="1" aria-label="x під індексом p">
+                </label>
+                <label>
+                  <span class="linear-field-label-prefix" id="textProblemYLabel">y<span class="sub-idx">p</span> =</span>
+                  <input type="number" id="textProblemYp" step="1" aria-label="y під індексом p">
+                </label>
+              </div>
+              <div id="textProblemInlineMessage" style="margin-top: 10px;"></div>
+
+              <div class="linear-task-footer">
+                <button type="button" class="primary-btn" id="textProblemCheckBtn">Перевірити</button>
+                <button type="button" class="ghost-btn" id="textProblemHintBtn">Підказка</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="resultSection" style="display: none;">
+            <div id="textProblemResultContent" class="solution"></div>
+            <button id="textProblemNewTaskBtn" class="ghost-btn" style="margin-top: 12px; width: 100%;">Нове завдання</button>
+          </div>
+        </div>
+
+        <div class="card result-card" id="solutionCard">
+          <h3>Приклад розв'язування</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/text-problems.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

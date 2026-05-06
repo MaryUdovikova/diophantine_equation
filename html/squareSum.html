@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сума квадратів | Диофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/squaresum.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-squaresum">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/quadratic-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Представлення числа як суми двох квадратів</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="squareSumDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="squareSumDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="squareSumDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+          <div class="solution linear-task-work" id="squareSumTaskPanel">
+            <div id="taskSection">
+              <div id="squareSumEquationDisplay" class="linear-equation-display">
+                <p id="squareSumTaskText" class="square-sum-task-text"></p>
+              </div>
+
+              <div id="inputSection">
+                <div id="squareSumPairRows" class="square-sum-pair-rows" aria-label="Пари координат (x, y)"></div>
+                <div class="linear-task-footer square-sum-actions" style="margin-top: 10px;">
+                  <button type="button" class="primary-btn" id="finishBtn">Перевірити</button>
+                  <button type="button" class="ghost-btn" id="squareSumHintBtn">Підказка</button>
+                </div>
+              </div>
+
+              <div id="resultSection" style="display: none;">
+                <div id="resultContent" class="solution"></div>
+                <button class="ghost-btn" id="newTaskBtn" style="margin-top: 12px; width: 100%;">Нове завдання</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card result-card">
+          <div id="squareSumIntro" class="solution coins-intro">
+            <h3>Приклад розв'язання</h3>
+            <div class="coins-intro-text">
+              <p>Нехай маємо число <math><mn>n</mn><mo>=</mo><mn>25</mn></math><br>
+              Потрібно знайти такі пари цілих чисел <math><mtext>(</mtext><mn>x</mn><mo>,</mo><mn>y</mn><mtext>)</mtext></math>, для яких <math><msup><mn>x</mn><mn>2</mn></msup> <mo>+</mo> <msup><mn>y</mn><mn>2</mn></msup> <mo>=</mo> <mn>n</mn></math>.</p>
+              <p>Спочатку потрібно визначити ті квадрати чисел, які не перевищують <math><mn>n</mn></math>.
+              У випадку <math><mn>n</mn><mo>=</mo><mn>25</mn></math> це квадрати чисел від <math><mn>0</mn></math> до <math><mn>5</mn></math>:  <math><msup><mn>0</mn><mn>2</mn></msup><mo>=</mo><mn>0</mn><mo>,</mo></math> <math><msup><mn>1</mn><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo>,</mo></math> <math><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>,</mo></math> <math><msup><mn>3</mn><mn>2</mn></msup><mo>=</mo><mn>9</mn><mo>,</mo></math> <math><msup><mn>4</mn><mn>2</mn></msup><mo>=</mo><mn>16</mn><mo>,</mo></math> <math><msup><mn>5</mn><mn>2</mn></msup><mo>=</mo><mn>25</mn><mo>.</mo></math><br>
+                Далі потрібно перебрати всі можливі пари цих квадратів і перевірити, чи їх сума дорівнює <math><mn>n</mn></math>.<br>
+                Наприклад: <math><msup><mn>0</mn><mn>2</mn></msup> <mo>+</mo> <msup><mn>5</mn><mn>2</mn></msup> <mo>=</mo> <mn>25</mn><mo>,</mo></math> отже пара <math><mtext>(</mtext><mn>0</mn><mo>,</mo><mn>5</mn><mtext>)</mtext></math> підходить. Рівняння <math><msup><mn>3</mn><mn>2</mn></msup> <mo>+</mo> <msup><mn>4</mn><mn>2</mn></msup> <mo>=</mo> <mn>25</mn></math> також виконується, тому пара <math><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>4</mn><mtext>)</mtext></math> теж підходить.<br>
+                Перевіривши всі можливі комбінації, ми маємо пари <math><mtext>(</mtext><mn>0</mn><mo>,</mo><mn>5</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>5</mn><mo>,</mo><mn>0</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>4</mn><mo>,</mo><mn>3</mn><mtext>)</mtext><mo>.</mo></math> Оскільки при піднесенні до квадрату від’ємні числа дають додатний результат, то також враховуються пари з від’ємними числами. 
+                Тобто також правильними парами будуть: <math><mtext>(</mtext><mn>0</mn><mo>,</mo><mn>-5</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>-5</mn><mo>,</mo><mn>0</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>-3</mn><mo>,</mo><mn>4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>4</mn><mo>,</mo><mn>-3</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>-4</mn><mo>,</mo><mn>3</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>-4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>-3</mn><mo>,</mo><mn>-4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>-4</mn><mo>,</mo><mn>-3</mn><mtext>)</mtext><mo>.</mo></math></p>
+          </div>
+        </div>
+          <div id="squareSumVizWrapper" style="display: none;">
+            <h3 style="margin-top: 0;">Візуалізація</h3>
+            <canvas id="coordinateCanvas" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/squareSum.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

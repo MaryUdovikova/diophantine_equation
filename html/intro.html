@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вступ | Диофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/theory.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="theme-theory">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Вступ</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <article class="card">
+        <h2>Хто такий Діофант?</h2>
+        <p>Діофант Александрійський - це давньогрецький математик, 
+          який жив у III столітті нашої ери, тобто приблизно 1800 років тому, 
+          у місті Александрія (сучасний Єгипет). Його часто називають «батьком алгебри». 
+          Діофанта прозвали новатором математичних символів, оскільки він одним із 
+          перших почав використовувати спеціальні символи та скорочення для невідомих 
+          величин. До нього математики записували рівняння словами (наприклад, 
+          "число додати до іншого числа дорівнює...").
+        </p>
+        <p>Про життя Діофанта майже нічого не відомо. Усю біографію математика нащадки дізналися з математичної задачі-вірша, яка, за легендою, була викарбувана на його могильному камені:</p>
+        <div class="intro-diofant-lead">
+          <figure class="intro-diofant-portrait-wrap">
+            <img
+              class="intro-diofant-portrait"
+              src="/diophantine_equation/images/Diofant.png"
+              alt="Умовний портрет Діофанта Александрійського"
+              width="320"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div class="intro-diofant-lead-body">
+        <p class="intro-diofant-epitaph"><strong><i>Тут спочиває Діофант. О, диво! Камінь цей<br>
+          Нам відкриває вік його в знанні усіх подій:<br>
+          Шоста частина життя - це дитинство, що швидко минало,<br>
+          Частка дванадцята - коли обличчя пушком заростало.<br>
+          Сьома частина пройшла, тоді й одружився він,<br>
+          Ще через п'ять літ пізнав він батьківства світ.<br>
+          Син народився... та доля жорстока й сумна:<br>
+          Тільки півжиття батька зміг прожити сповна.<br>
+          Втрату чотири роки в науці вгамовував Діофант,<br>
+          Так і завершився земний математика шлях.</i></strong>
+        </p>
+        <p>У цій задачі сказано, що його дитинство тривало <math><mfrac><mrow><mn>1</mn></mrow><mn>6</mn></mfrac></math> життя, 
+          юність - <math><mfrac><mrow><mn>1</mn></mrow><mn>12</mn></mfrac><mo>,</mo></math> шлюб без дітей - <math><mfrac><mrow><mn>1</mn></mrow><mn>7</mn></mfrac><mo>,</mo></math> потім через 5 років народився син, 
+          який прожив удвічі менше за батька - <math><mfrac><mrow><mn>1</mn></mrow><mn>2</mn></mfrac><mo>,</mo></math> і через 4 роки після смерті сина помер сам Діофант. Отримавши і розв'язавши це рівняння 
+          <math><mtext>(</mtext><mfrac><mrow><mn>1</mn></mrow><mn>6</mn></mfrac><mi>x</mi><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mn>12</mn></mfrac><mi>x</mi><mo>+</mo>
+          <mfrac><mrow><mn>1</mn></mrow><mn>7</mn></mfrac><mi>x</mi><mo>+</mo><mn>5</mn><mo>+</mo>          <mfrac><mrow><mn>1</mn></mrow><mn>2</mn></mfrac><mi>x</mi><mo>+</mo>
+          <mn>4</mn><mo>=</mo><mi>x</mi><mtext>)</mtext><mo>,</mo></math> можна дізнатися, що він прожив 84 роки.</p>
+          </div>
+        </div>
+
+          <h2>Що таке діофантові рівняння?</h2>
+          <p>Діофантові рівняння - це рівняння з двома або більше невідомими, для яких ми шукаємо розв'язки тільки серед цілих або натуральних чисел.
+          Вони названі на честь Діофанта, оскільки він був одним із перших математиків, хто почав систематично вивчати такі рівняння. 
+          В реальному житті ми часто стикаємося з ситуаціями, коли потрібно знайти цілі числа, які задовольняють певні умови.
+          </p>
+          <p>Розглянемо ситуацію: ви прийшли у парк розваг. За виграш у міні іграх ви виграєте 15 ігрових квитків, а за програш маєте віддати 10 квитків. В кінці дня у вас залишилося 50 квитків. Питання: скільки разів ви виграли і скільки програли?</p>
+        <p>З умови ми можемо скласти рівняння: <math><mn>15</mn><mi>x</mi><mo>-</mo><mn>10</mn><mi>y</mi><mo>=</mo><mn>50</mn></math>, де <math><mi>x</mi></math> - кількість виграшів, а <math><mi>y</mi></math> - кількість програшів.<br>
+           Якщо ми не обмежуватимемося цілими числами, то це рівняння має безліч розв'язків. 
+           Наприклад, якщо <math><mi>x</mi><mo>=</mo><mn>6,5</mn></math> і <math><mi>y</mi><mo>=</mo><mn>4,75</mn></math>, 
+           то рівняння буде виконуватися: <math><mn>15</mn><mo>&times;</mo><mn>6,5</mn><mo>-</mo><mn>10</mn><mo>&times;</mo><mn>4,75</mn><mo>=</mo><mn>97,5</mn><mo>-</mo><mn>47,5</mn><mo>=</mo><mn>50</mn></math>.
+           Але в реальному житті ви не можете виграти <math><mn>3,5</mn></math> разів або програти <math><mn>4,75</mn></math> разів. Ви можете виграти або програти лише ціле число разів. 
+           Тому ми шукаємо розв'язки серед цілих чисел, і саме такі рівняння називаються діофантовими.</p>
+          
+        <p>Тоді як розв'язати цю задачу? Спочатку потрібно знайти найбільший спільний дільник (НСД) коефіцієнтів при невідомих, за допомогою алгоритму Евкліда. Потім за допомогою розширеного алгоритму Евкліда знайдемо частковий розв'язок. І в кінці знайдемо всі можливі розв'язки.</p>
+
+<p><strong>Знаходження НСД за алгоритмом Евкліда</strong><br>
+    Дано рівняння: <math><mn>15</mn><mi>x</mi><mo>-</mo><mn>10</mn><mi>y</mi><mo>=</mo><mn>50</mn></math>. Знайдемо найбільший спільний дільник (НСД) для  коефіцієнтів <math><mn>15</mn></math> і <math><mn>10</mn></math>. За алгоритмом Евкліда ми ділимо більше число на менше, шукаючи остачу:<br>
+    <math><mn>15</mn><mo>=</mo><mn>10</mn><mo>&times;</mo><mn>1</mn><mo>+</mo><mn>5</mn></math> (остача 5)<br>
+    <math><mn>10</mn><mo>=</mo><mn>5</mn><mo>&times;</mo><mn>2</mn><mo>+</mo><mn>0</mn></math> (остача 0)<br>
+Остання ненульова остача - це <math><mn>5</mn></math>. Отже, <math><mi>НСД</mi><mtext>(</mtext><mn>15</mn><mo>,</mo><mn>10</mn><mtext>)</mtext><mo>=</mo><mn>5</mn></math>. Оскільки число 50 ділиться на 5 без остачі, це свідчить про те, що задача має розв'язки у цілих числах.
+</p>
+
+<p><strong>Знаходження часткового розв'язку за розширеним алгоритмом Евкліда</strong><br>
+Тепер потрібно виразити знайдений НСД через коефіцієнти при змінних. Для цього беремо рівняння з алгоритму Евкліда, де фігурує НСД і виражаємо його:<br>
+<math><mn>5</mn><mo>=</mo><mn>15</mn><mo>-</mo><mn>10</mn><mo>&times;</mo><mn>1</mn></math><br>
+маємо такі самі коефіцієнти, що і в умові, але відповідь дорівнює 5, хоча в умові у нас 50. Для цього масштабуємо весь розв'язок, тобто множимо обидві частини на 10:<br>
+<math><mn>50</mn><mo>=</mo><mn>15</mn><mo>&times;</mo><mo>(</mo><mn>10</mn><mo>)</mo><mo>-</mo><mn>10</mn><mo>&times;</mo><mo>(</mo><mn>10</mn><mo>)</mo></math><br>
+Звідси отримуємо наш перший, <strong>частковий розв'язок</strong>, де кількість виграшів <strong><math><msub><mi>x</mi><mi>p</mi></msub><mo>=</mo><mn>10</mn><mo>,</mo></math></strong> а кількість програшів <strong><math><msub><mi>y</mi><mi>p</mi></msub><mo>=</mo><mn>10</mn></math></strong>.</p>
+
+<p><strong>Знаходження всіх можливих (загальних) розв'язків</strong><br>
+  Було знайдено один правильний варіант (10 виграшів і 10 програшів). Тепер підставимо всі відомі значення у формули для знаходження інших розв'язків:<br>
+<math><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>p</mn></msub><mo>+</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>НСД</mi></mrow></mfrac><mo>&times;</mo><mi>k</mi></math><br>
+<math><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>p</mn></msub><mo>-</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>НСД</mi></mrow></mfrac><mo>&times;</mo><mi>k</mi></math><br>
+Де <math><mi>a</mi></math> і <math><mi>b</mi></math> - це коефіцієнти при <math><mi>x</mi></math> і <math><mi>y</mi></math> відповідно, <math><mi>НСД</mi></math> - це найбільший спільний дільник, <math><msub><mi>x</mi><mn>p</mn></msub></math> і <math><msub><mi>y</mi><mn>p</mn></msub></math> - частковий розв'язок, а <math><mi>k</mi></math> - будь-яке ціле число. Підставляючи різні цілі числа замість <math><mi>k</mi></math>, ми отримуємо різні комбінації виграшів і програшів, які також задовольняють умову задачі.
+
+</p>
+<p>З нашого рівняння <math><mn>15</mn><mi>x</mi><mo>-</mo><mn>10</mn><mi>y</mi><mo>=</mo><mn>50</mn><mo>,</mo></math> <math><mi>a</mi><mo>=</mo><mn>15</mn><mo>,</mo></math> <math><mi>b</mi><mo>=</mo><mo>-</mo><mn>10</mn><mo>,</mo></math> <math><mi>НСД</mi><mo>=</mo><mn>5</mn><mo>,</mo></math> <math><msub><mi>x</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo></math> <math><msub><mi>y</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>.</mo></math> Підставляємо ці дані у формули:<br>
+<math><mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mfrac><mrow><mtext>(</mtext><mo>-</mo><mn>10</mn><mtext>)</mtext></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>-</mo><mn>2</mn><mi>k</mi></math><br>
+<math><mi>y</mi><mo>=</mo><mn>10</mn><mo>-</mo><mfrac><mrow><mn>15</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>-</mo><mn>3</mn><mi>k</mi></math><br>
+Тепер, підставляючи замість <math><mi>k</mi></math> різні цілі числа, ми можемо розраховувати всі інші можливі розв'язки, однак вони повинні бути цілими і не від'ємними, бо неможливо мати від'ємну кількість виграшів або програшів:<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>1</mn></math>: <math><mi>x</mi><mo>=</mo><mn>8</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>7</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>2</mn></math>: <math><mi>x</mi><mo>=</mo><mn>6</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>4</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>3</mn></math>: <math><mi>x</mi><mo>=</mo><mn>4</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>1</mn></math> (програшів).<br>
+</p>
+
+<p><strong>Висновок</strong><br>
+Отже, замість того щоб підбирати числа навмання існує певний алгоритм, слідуючи якому, ми можемо знайти всі можливі комбінації і розв'язки поставленої задачі.</p>
+</article>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

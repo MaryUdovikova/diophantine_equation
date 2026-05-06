@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задача про монети | Диофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/coins.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-coins">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/linear-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Задача про монети</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" id="coinsDifficultyFieldset" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="coinsDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="coinsDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="coinsDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+          <div class="solution linear-task-work" id="coinsTaskPanel">
+            <div id="coinsEquationDisplay" class="linear-equation-display">
+              <span id="coinsEquationText"></span>
+            </div>
+
+            <input type="hidden" id="coinP" value="">
+            <input type="hidden" id="coinQ" value="">
+            <input type="hidden" id="coinLimit" value="">
+
+            <div class="linear-task-footer">
+              <button type="button" class="primary-btn" id="startGame">Почати гру</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card result-card" id="solutionCard">
+          <div id="coinsIntro" class="solution coins-intro">
+            <h3>Приклад розв'язання</h3>
+            <div id="hintsContent" class="coins-intro-text">
+              <p>Монетами номіналом <math><mi>p</mi> <mo>=</mo> <mn>3</mn></math> та <math><mi>q</mi> <mo>=</mo> <mn>5</mn></math> можна скласти суми за формулою <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mi>x</mi> <mo>+</mo> <mn>5</mn><mi>y</mi></math> (де <math><mi>x</mi></math> та <math><mi>y</mi></math> - невід'ємні цілі числа).</p>
+              <p>
+                  1. <strong>Перевірка НСД.</strong> Оскільки <math><mi>НСД</mi><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>5</mn><mtext>)</mtext><mo>=</mo><mn>1</mn></math>, ми гарантовано зможемо скласти будь-яку суму, починаючи з певного числа.
+              </p>
+                <p>
+                    2. <strong>Число Фробеніуса.</strong> Найбільша сума, яку <strong>неможливо</strong> скласти, обчислюється за формулою <math><mi>g</mi><mtext>(</mtext><mi>p</mi><mo>,</mo><mi>q</mi><mtext>)</mtext> <mo>=</mo> <mi>p</mi><mi>q</mi> <mo>−</mo> <mi>p</mi> <mo>−</mo> <mi>q</mi></math>. Для наших номіналів монет це: <math><mn>15</mn> <mo>−</mo> <mn>3</mn> <mo>−</mo> <mn>5</mn> <mo>=</mo> <mn>7</mn></math>. Отже, будь-яку суму більшу за <math><mn>7</mn></math> скласти точно можливо.
+                </p>
+                <p>
+                    3. <strong>Кількість недосяжних сум.</strong> Обчислюється за формулою: 
+                    <math>
+                        <mfrac>
+                            <mrow><mtext>(</mtext><mi>p</mi><mo>-</mo><mn>1</mn><mtext>)</mtext><mtext>(</mtext><mi>q</mi><mo>-</mo><mn>1</mn><mtext>)</mtext></mrow>
+                            <mrow><mn>2</mn></mrow>
+                        </mfrac>
+                    </math>. 
+                    Підставивши <math><mn>3</mn></math> та <math><mn>5</mn></math>, отримуємо <math><mi>N</mi><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>5</mn><mtext>)</mtext> <mo>=</mo> <mfrac><mrow><mtext>(</mtext><mn>3</mn><mo>-</mo><mn>1</mn><mtext>)</mtext><mtext>(</mtext><mn>5</mn><mo>-</mo><mn>1</mn><mtext>)</mtext></mrow><mrow><mn>2</mn></mrow></mfrac> <mo>=</mo> <mn>4</mn></math> (рівно <strong><math><mn>4</mn></math></strong> недосяжні суми).
+                </p>
+                <p>
+                    
+                    <strong>Недосяжні суми.</strong> Шляхом перебору:<br>
+                    <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mo>&times;</mo><mn>1</mn> <mo>+</mo> <mn>5</mn><mo>&times;</mo><mn>0</mn> <mo>=</mo> <mn>3</mn></math>; <br>
+
+                 <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mo>&times;</mo><mn>0</mn> <mo>+</mo> <mn>5</mn><mo>&times;</mo><mn>1</mn> <mo>=</mo> <mn>5</mn></math>; <br>
+
+                 <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mo>&times;</mo><mn>2</mn> <mo>+</mo> <mn>5</mn><mo>&times;</mo><mn>0</mn> <mo>=</mo> <mn>6</mn></math>; <br>
+
+                 <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mo>&times;</mo><mn>1</mn> <mo>+</mo> <mn>5</mn><mo>&times;</mo><mn>1</mn> <mo>=</mo> <mn>8</mn></math>; <br>
+
+                 <math><mi>u</mi> <mo>=</mo> <mn>3</mn><mo>&times;</mo><mn>3</mn> <mo>+</mo> <mn>5</mn><mo>&times;</mo><mn>0</mn> <mo>=</mo> <mn>9</mn></math>. <br>
+                    бачимо, що можна скласти суми <math><mn>3</mn><mo>,</mo></math> <math><mn>5</mn><mo>,</mo></math> <math><mn>6</mn><mo>,</mo></math> <math><mn>8</mn><mo>,</mo></math> <math><mn>9</mn></math> тощо. Ті самі <math><mn>4</mn></math> суми, які скласти не виходить - це <math><mn>1</mn><mo>,</mo></math> <math><mn>2</mn><mo>,</mo></math> <math><mn>4</mn></math> та <math><mn>7</mn></math> (де <math><mn>7</mn></math> це найбільша і остання недосяжна сума).
+                </p>
+            </div>
+          </div>
+
+          <div id="coinsGamePanel" class="solution coins-game-panel" style="display: none;">
+            <div id="coinsScoreBoard" class="score-result-block">
+              Оцінка: <span id="score">0 / 12</span>
+            </div>
+            <div id="coinsStatus" class="coins-status"></div>
+            <div id="coinsHintLine" class="coins-hint-line" hidden></div>
+            <div id="coinsGrid" class="grid-badges"></div>
+            <div class="check-section coins-actions" id="checkSection" style="display: none;">
+              <div class="linear-task-footer">
+                <button type="button" class="primary-btn" id="checkAnswers">Перевірити</button>
+                <button type="button" class="ghost-btn" id="coinsHintBtn">Підказка</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/coins.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

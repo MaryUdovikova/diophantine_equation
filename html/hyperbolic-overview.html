@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гіперболічні діофантові рівняння | Теорія</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/hiper.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="theme-hiper">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Гіперболічні діофантові рівняння</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <article class="card">
+        <h3>Огляд гіперболічних діофантових рівнянь</h3>
+        <p>Гіперболічні діофантові рівняння - це рівняння, які мають вигляд <math><mi>x</mi><mi>y</mi><mo>=</mo><mi>k</mi></math>, де <math><mi>k</mi></math> - це якесь відоме число, а <math><mi>x</mi></math> та <math><mi>y</mi></math> - цілі невідомі.</p>
+        <p>Щоб знайти всі розв'язки, потрібно знайти всі дільники числа <math><mi>k</mi></math>. Тобто ми шукаємо пари цілих чисел, добуток яких дорівнює <math><mi>k</mi><mo>.</mo></math></p>
+        <p>Геометрично це рівняння описує гіперболу. Кожна пара <math><mtext>(</mtext></math><math><mi>x</mi><mo>,</mo><mi>y</mi></math><math><mtext>)</mtext></math> - це цілочисельні координати точок, на гіперболі.</p>
+        <p>Нехай нам дано число <math><mi>k</mi><mo>=</mo><mn>6</mn><mo>.</mo></math> Потрібно знайти всі цілі числа <math><mi>x</mi></math> і <math><mi>y</mi></math>, які задовольняють рівняння <math><mi>x</mi><mi>y</mi><mo>=</mo><mn>6</mn></math>.<br>
+        Спочатку знаходимо всі числа, на які <math><mn>6</mn></math> ділиться без остачі. Це <math><mn>1</mn><mo>,</mo></math> <math><mn>2</mn><mo>,</mo></math> <math><mn>3</mn><mo>,</mo></math> <math><mn>6</mn><mo>.</mo></math> А також від'ємні числа <math><mo>-</mo><mn>1</mn><mo>,</mo></math> <math><mo>-</mo><mn>2</mn><mo>,</mo></math> <math><mo>-</mo><mn>3</mn><mo>,</mo></math> <math><mo>-</mo><mn>6</mn><mo>.</mo></math></p>
+        <div class="hiper-overview-example">
+          <div class="hiper-overview-example-text">
+            <p>Тепер складаємо з них пари, які при множенні дають <math><mn>6</mn></math>:<br>
+            <math><mi>x</mi><mo>=</mo><mn>1</mn></math> і <math><mi>y</mi><mo>=</mo><mn>6</mn><mo>,</mo></math> оскільки <math><mn>1</mn><mo>&times;</mo><mn>6</mn><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mn>2</mn></math> і <math><mi>y</mi><mo>=</mo><mn>3</mn><mo>,</mo></math> оскільки <math><mn>2</mn><mo>&times;</mo><mn>3</mn><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mn>3</mn></math> і <math><mi>y</mi><mo>=</mo><mn>2</mn><mo>,</mo></math> оскільки <math><mn>3</mn><mo>&times;</mo><mn>2</mn><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mn>6</mn></math> і <math><mi>y</mi><mo>=</mo><mn>1</mn><mo>,</mo></math> оскільки <math><mn>6</mn><mo>&times;</mo><mn>1</mn><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            А тепер пари з мінусами:<br>
+            <math><mi>x</mi><mo>=</mo><mo>-</mo><mn>1</mn></math> і <math><mi>y</mi><mo>=</mo><mo>-</mo><mn>6</mn><mo>,</mo></math> оскільки <math><mtext>(</mtext><mo>-</mo><mn>1</mn><mtext>)</mtext><mo>&times;</mo><mtext>(</mtext><mo>-</mo><mn>6</mn><mtext>)</mtext><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mo>-</mo><mn>2</mn></math> і <math><mi>y</mi><mo>=</mo><mo>-</mo><mn>3</mn><mo>,</mo></math> оскільки <math><mtext>(</mtext><mo>-</mo><mn>2</mn><mtext>)</mtext><mo>&times;</mo><mtext>(</mtext><mo>-</mo><mn>3</mn><mtext>)</mtext><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mo>-</mo><mn>3</mn></math> і <math><mi>y</mi><mo>=</mo><mo>-</mo><mn>2</mn><mo>,</mo></math> оскільки <math><mtext>(</mtext><mo>-</mo><mn>3</mn><mtext>)</mtext><mo>&times;</mo><mtext>(</mtext><mo>-</mo><mn>2</mn><mtext>)</mtext><mo>=</mo><mn>6</mn><mo>,</mo></math><br>
+            <math><mi>x</mi><mo>=</mo><mo>-</mo><mn>6</mn></math> і <math><mi>y</mi><mo>=</mo><mo>-</mo><mn>1</mn><mo>,</mo></math> оскільки <math><mtext>(</mtext><mo>-</mo><mn>6</mn><mtext>)</mtext><mo>&times;</mo><mtext>(</mtext><mo>-</mo><mn>1</mn><mtext>)</mtext><mo>=</mo><mn>6</mn><mo>.</mo></math><br>
+            Отже, розв'язками рівняння <math><mi>x</mi><mi>y</mi><mo>=</mo><mn>6</mn></math> є такі 8 пар: <math><mtext>(</mtext><mn>1</mn><mo>,</mo><mn>6</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>3</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>2</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mn>6</mn><mo>,</mo><mn>1</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mo>-</mo><mn>1</mn><mo>,</mo><mo>-</mo><mn>6</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>3</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mo>-</mo><mn>3</mn><mo>,</mo><mo>-</mo><mn>2</mn><mtext>)</mtext></math>, <math><mtext>(</mtext><mo>-</mo><mn>6</mn><mo>,</mo><mo>-</mo><mn>1</mn><mtext>)</mtext><mo>.</mo></math>
+            </p>
+          </div>
+          <figure class="hiper-overview-example-fig">
+            <img
+              class="hiper-overview-example-img"
+              src="/diophantine_equation/images/hiper.png"
+              alt="Гіпербола xy = 6 на координатній площині з відміченими цілочисельними розв'язками"
+              width="220"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+        <div class="card-button">
+          <a href="/diophantine_equation/html/hyperbolic-tasks.html" class="izzi-btn">Завдання</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

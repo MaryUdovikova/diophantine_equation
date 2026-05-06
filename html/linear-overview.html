@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лінійні діофантові рівняння | Теорія</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/linear.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="theme-linear">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Лінійні діофантові рівняння</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <article class="card">
+        <h3>Основна форма</h3>
+        <p>Лінійне діофантове рівняння з двома змінними має вигляд <math><mi>a</mi><mi>x</mi> <mo>+</mo> <mi>b</mi><mi>y</mi> <mo>=</mo> <mi>c</mi></math>, 
+          де <math><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></math> - відомі цілі числа (коефіцієнти), а 
+          <math><mi>x</mi></math> та <math><mi>y</mi></math> - невідомі змінні, для яких ми шукаємо тільки цілочисельні розв'язки (<math><mi>x</mi><mo>,</mo><mi>y</mi></math> &isin; &#8484;). 
+          Цілочисельні розв'язки існують <strong>тоді й тільки тоді</strong>, коли <math><mi>c</mi></math> ділиться націло на <math><mi>НСД</mi><mtext>(</mtext><mi>a</mi><mo>,</mo><mi>b</mi><mtext>)</mtext></math>(найбільший спільний дільник чисел <math><mi>a</mi></math> та <math><mi>b</mi></math>).
+        Щоб знайти <math><mi>НСД</mi><mtext>(</mtext><mi>a</mi><mo>,</mo><mi>b</mi><mtext>)</mtext></math> потрібно застосувати алгоритм Евкліда, а для знаходження часткових розв'язків використовується розширений алгоритм Евкліда.</p>
+        <p>Нехай ми маємо рівняння <math><mn>14</mn><mi>x</mi> <mo>+</mo> <mn>10</mn><mi>y</mi> <mo>=</mo> <mn>6</mn></math>.</p>
+        <p>Спершу треба дізнатися, чи існують розв'язки. Для цього шукаємо Найбільший спільний дільник (НСД) чисел біля невідомих (14 і 10). Ділимо більше число на менше з остачею, поки остача не стане нулем:<br>
+        <math><mn>14</mn> <mo>=</mo> <mn>10</mn></math>&times;<math><mn>1</mn></math> + <math><mn>4</mn></math> (остача 4)<br>
+        <math><mn>10</mn> <mo>=</mo> <mn>4</mn></math>&times;<math><mn>2</mn></math> + <math><mn>2</mn></math> (остача 2)<br>
+        <math><mn>4</mn> <mo>=</mo> <mn>2</mn></math>&times;<math><mn>2</mn></math> + <math><mn>0</mn></math> (остача 0)<br>
+        Остання ненульова остача - це <math><mn>2</mn></math>, тобто <math><mi>НСД</mi><mtext>(</mtext><mn>14</mn><mo>,</mo><mn>10</mn><mtext>)</mtext><mo>=</mo><mn>2</mn></math>.<br>
+        Оскільки <math><mn>2</mn></math> ділить <math><mn>6</mn></math> націло, то <strong>розв'язки існують</strong>. Якщо б <math><mn>2</mn></math> не ділило <math><mn>6</mn></math>, то розв'язки не існували б.
+        </p>
+        <p>Тепер шукаємо пару чисел які будуть цілими розв'язками. Для цього беремо кроки з алгоритму Евкліда і крокуємо назад, щоб виразити НСД через початкові числа 14 і 10.<br>
+          З передостаннього рівняння маємо: <math><mn>2</mn> <mo>=</mo> <mn>10</mn><mo>-</mo><mn>4</mn></math>&times;<math><mn>2</mn></math>.<br>
+          Підставляємо замість <math><mn>4</mn></math> його вираз з першого рівняння <math><mn>14</mn> <mo>-</mo> <mn>10</mn></math>&times;<math><mn>1</mn></math>:<br>
+          <math><mn>2</mn> <mo>=</mo> <mn>10</mn><mo>-</mo><mtext>(</mtext><mn>14</mn><mo>-</mo><mn>10</mn></math>&times;<math><mn>1</mn><mtext>)</mtext></math>&times;<math><mn>2</mn></math>. <br>
+          Розкриваємо дужки і отримуємо: <math><mn>2</mn> <mo>=</mo> <mn>10</mn></math>&times;<math><mn>3</mn><mo>-</mo><mn>14</mn></math>&times;<math><mn>2</mn></math>.<br>
+          Ми знайшли пару чисел для результату 2. Але у нас результат 6, тому множимо обидві частини рівняння на <math><mn>3</mn></math>:<br>
+          <math><mn>6</mn> <mo>=</mo> <mn>10</mn><mo>&times;</mo><mn>9</mn><mo>-</mo><mn>14</mn><mo>&times;</mo><mn>6</mn></math>. <br>
+          Отже, частковими розв'язками є: <math><mi>x</mi><mo>=</mo><mn>-6</mn></math> та <math><mi>y</mi><mo>=</mo><mn>9</mn></math>.
+        </p>
+        
+        <div class="card-button">
+          <a href="/diophantine_equation/html/linear-tasks.html" class="izzi-btn">Завдання</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

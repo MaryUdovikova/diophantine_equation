@@ -1,0 +1,62 @@
+
+.intro-diofant-lead {
+  
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 0.5rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.intro-diofant-portrait-wrap {
+  margin: 0;
+  margin-right: 3rem;
+  flex: 0 0 auto;
+  width: min(280px, 34vw);
+  max-width: 280px;
+}
+
+.intro-diofant-lead-body {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.intro-diofant-lead-body .intro-diofant-epitaph {
+  margin-top: 0;
+}
+
+.intro-diofant-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 720px) {
+  .intro-diofant-lead {
+    flex-direction: column;
+  }
+
+  .intro-diofant-portrait-wrap {
+    max-width: 260px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+body.theme-theory {
+  --btn-gradient: linear-gradient(to right, #cf96ca 0%, #de20d8 53%, #ba255e 100%);
+  --btn-bg-fallback: #ba255e;
+  --btn-shadow-rgb: 186, 37, 94;
+  --theme-page-bg-image: url("../../images/banners/theory.jpg");
+  --hero-banner-bg: linear-gradient(135deg, #ba255e, #de20d8, #cf96ca);
+}
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Піфагорові трійки | Диофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/pythagorean.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-pythagorean">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/quadratic-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Піфагорові трійки</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="pythagoreanDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="pythagoreanDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="pythagoreanDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+          <div class="solution linear-task-work" id="pythagoreanTaskPanel">
+            <div id="taskSection">
+              <div id="pythagoreanEquationDisplay" class="linear-equation-display">
+                <p id="pythagoreanTaskIntro" class="pyth-task-intro"></p>
+              </div>
+
+              <div id="pythagoreanLegFields">
+                <label>
+                  <span class="linear-field-label-prefix">Катет a =</span>
+                  <input type="number" id="taskA" step="1" aria-label="Катет a">
+                </label>
+                <label>
+                  <span class="linear-field-label-prefix">Катет b =</span>
+                  <input type="number" id="taskB" step="1" aria-label="Катет b">
+                </label>
+              </div>
+
+              <div id="taskResult" style="margin: 12px 0; min-height: 24px;"></div>
+              <div class="linear-task-footer" id="pythagoreanTaskFooter">
+                <button type="button" class="primary-btn" id="checkCurrentTask" style="display: none;">Перевірити</button>
+                <button type="button" class="ghost-btn" id="pythagoreanHintBtn" style="display: none;">Підказка</button>
+              </div>
+              <div id="taskScore" class="score-result-block" style="display: none; margin-top: 8px;"></div>
+              <button class="primary-btn" id="nextTask" style="display: none; margin-top: 8px;">Нове завдання</button>
+            </div>
+          </div>
+        </div>
+        <div class="card result-card" id="pythagoreanResultCard">
+          <div id="pythagoreanExampleIntro" class="solution coins-intro">
+            <h3>Приклад розв'язання</h3>
+            <div class="coins-intro-text">
+              <p>Нехай маємо гіпотенузу <math><mi>c</mi> <mo>=</mo> <mn>5</mn></math>. Потрібно знайти цілі додатні катети <math><mi>a</mi></math> та <math><mi>b</mi></math>, для яких <math><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup> <mo>=</mo> <msup><mi>c</mi><mn>2</mn></msup></math>.</p>
+              <p>Виразимо <math><mi>c</mi></math> як суму двох квадратів <math><mi>c</mi> <mo>=</mo> <msup><mi>m</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>n</mi><mn>2</mn></msup></math>.<br>
+              Маємо <math><mn>5</mn> <mo>=</mo> <msup><mn>2</mn><mn>2</mn></msup> <mo>+</mo> <msup><mn>1</mn><mn>2</mn></msup></math>, отже <math><mi>m</mi> <mo>=</mo> <mn>2</mn></math> та <math><mi>n</mi> <mo>=</mo> <mn>1</mn></math>.<br>
+              Катети обчислюємо за формулами <math><mi>a</mi> <mo>=</mo> <msup><mi>m</mi><mn>2</mn></msup> <mo>−</mo> <msup><mi>n</mi><mn>2</mn></msup></math> та <math><mi>b</mi> <mo>=</mo> <mn>2</mn><mi>m</mi><mi>n</mi></math>. 
+              Підставивши, отримуємо <math><mi>a</mi> <mo>=</mo> <msup><mn>2</mn><mn>2</mn></msup> <mo>−</mo> <msup><mn>1</mn><mn>2</mn></msup> <mo>=</mo> <mn>3</mn></math> та <math><mi>b</mi> <mo>=</mo> <mn>2</mn><mo>&times;</mo><mn>2</mn><mo>&times;</mo><mn>1</mn> <mo>=</mo> <mn>4</mn></math>. 
+              Отже, шукані катети - це <math><mi>a</mi> <mo>=</mo> <mn>3</mn></math> та <math><mi>b</mi> <mo>=</mo> <mn>4</mn></math>.
+            </p>
+            <p>Перевіримо отримане рішення:<br> 
+              <math><msup><mn>3</mn><mn>2</mn></msup> <mo>+</mo> <msup><mn>4</mn><mn>2</mn></msup> <mo>=</mo> <msup><mn>5</mn><mn>2</mn></msup></math><br>
+              <math><mn>9</mn> <mo>+</mo> <mn>16</mn> <mo>=</mo> <mn>25</mn></math><br>
+              <math><mn>25</mn> <mo>=</mo> <mn>25</mn></math>. 
+              Отже, катети знайдені вірно.</p>
+            </div>
+          </div>
+          <div id="taskCanvasWrapper" style="display: none;">
+            <h3 style="margin: 0 0 12px 0;">Трикутник</h3>
+            <canvas id="taskTriangleCanvas" width="320" height="220" aria-label="Візуалізація трикутника завдання"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/pythagorean.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

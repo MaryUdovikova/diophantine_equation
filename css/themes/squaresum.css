@@ -1,0 +1,45 @@
+
+body.theme-squaresum {
+  
+  --viz-canvas-bg: #f0f3f8;
+  --btn-gradient: linear-gradient(to right, #00ffae 0%, #007259 56%, #00594d 100%);
+  --btn-bg-fallback: #00594d;
+  --btn-shadow-rgb: 0, 89, 77;
+  --score-block-bg: linear-gradient(135deg, rgba(0, 255, 174, 0.2), rgba(0, 89, 77, 0.12));
+  --score-block-border: rgba(0, 114, 89, 0.24);
+  --score-block-text: #0f766e;
+  --viz-axis-color: #00a887;
+  --theme-page-bg-image: url("../../images/banners/squareSum.jpg");
+  --hero-banner-bg: linear-gradient(135deg, #00594d, #007259, #00ffae);
+}
+
+.square-sum-task-text {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text);
+  font-weight: 500;
+}
+
+#squareSumVizWrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#squareSumVizWrapper h3 {
+  width: 100%;
+  text-align: center;
+}
+
+#squareSumVizWrapper #coordinateCanvas {
+  display: block;
+  width: min(100%, 400px);
+  max-width: 400px;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--viz-canvas-bg);
+}
+
+
+

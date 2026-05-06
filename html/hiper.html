@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гіпербола | Діофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/hiper.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-hiper">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/hyperbolic-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Рівняння виду xy = k</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="hiperDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="hiperDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="hiperDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+          <div class="solution linear-task-work" id="hiperTaskPanel">
+            <div id="hiperTaskSection">
+              <p class="hiper-input-hint">
+                Дано число <math><mi>k</mi> <mo>=</mo><mi><mn id="hiperTaskKValue"></mn></mi></math>.
+              
+                Знайдіть усі цілі пари <math><mtext>(</mtext><mi>x</mi><mo>,</mo><mi>y</mi><mtext>)</mtext><mo>,</mo></math>
+                 для яких <math><mi>x</mi><mo>&times;</mo><mi>y</mi><mo>=</mo><mn>k</mn><mo>.</mo></math>
+                 Нижче у кожному рядку введіть одну цілу пару чисел. Порядок пар не важливий. Натисніть «Перевірити», коли заповните всі рядки.<br>
+                 <strong>Примітка:</strong> рівняння <math><mi>x</mi><mo>&times;</mo><mi>y</mi><mo>=</mo><mn>k</mn></math> має геометричну інтерпретацію - 
+                 це гіпербола, а пари <math><mtext>(</mtext><mi>x</mi><mo>,</mo><mi>y</mi><mtext>)</mtext></math> - це цілочисельні координати точок, на гіперболі. 
+                 Після перевірки ви побачите візуалізацію з введеними точками на гіперболі. Підказка покаже всі правильні пари та їх розташування на гіперболі.
+                </p>
+                
+              <div id="hiperInputSection">
+                <div id="hiperPairRows" class="square-sum-pair-rows" aria-label="Пари координат (x, y)"></div>
+
+                <div class="linear-task-footer square-sum-actions" style="margin-top: 10px;">
+                  <button type="button" class="primary-btn" id="hiperCheckBtn">Перевірити</button>
+                  <button type="button" class="ghost-btn" id="hiperHintBtn">Підказка</button>
+                </div>
+              </div>
+
+              <div id="hiperResultSection" style="display: none;">
+                <div id="hiperResultContent" class="solution"></div>
+                <button type="button" class="ghost-btn hiper-new-task-btn" id="hiperNewTaskBtn">Нове завдання</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card result-card">
+          <div id="hiperIntro" class="solution coins-intro">
+            <h3>Приклад розв'язання</h3>
+            <div class="coins-intro-text">
+              <p>Нехай маємо число <math><mi>k</mi> <mo>=</mo> <mn>12</mn><mo>.</mo></math><br>
+              Потрібно знайти такі пари цілих чисел <math><mtext>(</mtext><mi>x</mi><mo>,</mo><mi>y</mi><mtext>)</mtext><mo>,</mo></math> для яких <math><mi>x</mi><mo>&times;</mo><mi>y</mi><mo>=</mo><mn>12</mn><mo>.</mo></math></p>
+              </p>
+            
+              <p>Якщо <math><mi>k</mi><mo>&#8800;</mo><mn>0</mn><mo>,</mo></math> кожен натуральний дільник <math><mi>d</mi></math> числа <math><mn>12</mn></math> 
+                дає пару <math><mtext>(</mtext><mi>d</mi><mo>,</mo><mfrac><mn>12</mn><mi>d</mi></mfrac><mtext>)</mtext><mo>,</mo></math> бо <math><mi>d</mi><mo>&times;</mo><mfrac><mn>12</mn><mi>d</mi></mfrac><mo>=</mo><mn>12</mn></math> і <math><mfrac><mn>12</mn><mi>d</mi></mfrac></math> 
+                - ціле. Дільники числа <math><mn>12</mn></math>: <math><mn>1</mn><mo>,</mo></math> <math><mn>2</mn><mo>,</mo></math> <math><mn>3</mn><mo>,</mo></math> <math><mn>4</mn><mo>,</mo></math> <math><mn>6</mn><mo>,</mo></math> <math><mn>12</mn><mo>.</mo></math> 
+                Отже маємо пари <math><mtext>(</mtext><mi>x</mi><mo>,</mo><mi>y</mi><mtext>)</mtext></math> з додатними координатами: <math><mtext>(</mtext><mn>1</mn><mo>,</mo><mn>12</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>6</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>3</mn><mo>,</mo><mn>4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>4</mn><mo>,</mo><mn>3</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>6</mn><mo>,</mo><mn>2</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mn>12</mn><mo>,</mo><mn>1</mn><mtext>)</mtext><mo>.</mo></math>
+              </p>
+              <p>Добуток двох від’ємних чисел додатний, тому з кожної пари <math><mtext>(</mtext><mi>x</mi><mo>,</mo><mi>y</mi><mtext>)</mtext></math> з’являється ще пара <math><mtext>(</mtext><mo>-</mo><mi>x</mi><mo>,</mo><mo>-</mo><mi>y</mi><mtext>)</mtext><mo>,</mo></math> наприклад <math><mtext>(</mtext><mo>-</mo><mn>3</mn><mo>,</mo><mo>-</mo><mn>4</mn><mtext>)</mtext><mo>.</mo></math> 
+                Таким чином отримуємо ще 6 пар з від’ємними координатами: <math><mtext>(</mtext><mo>-</mo><mn>1</mn><mo>,</mo><mo>-</mo><mn>12</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mo>-</mo><mn>2</mn><mo>,</mo><mo>-</mo><mn>6</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mo>-</mo><mn>3</mn><mo>,</mo><mo>-</mo><mn>4</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mo>-</mo><mn>4</mn><mo>,</mo><mo>-</mo><mn>3</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mo>-</mo><mn>6</mn><mo>,</mo><mo>-</mo><mn>2</mn><mtext>)</mtext><mo>,</mo></math> <math><mtext>(</mtext><mo>-</mo><mn>12</mn><mo>,</mo><mo>-</mo><mn>1</mn><mtext>)</mtext><mo>.</mo></math>
+              </p>
+            </div>
+          </div>
+          <div id="hiperVizWrapper" style="display: none;">
+            <h3 style="margin-top: 0;">Візуалізація</h3>
+            <canvas id="hiperCanvas" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/hiper.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

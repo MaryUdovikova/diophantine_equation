@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лінійне діофантове рівняння | Диофантові рівняння</title>
+  <link rel="stylesheet" href="/diophantine_equation/css/styles.css">
+  <link rel="stylesheet" href="/diophantine_equation/css/themes/linear.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="theme-linear">
+  <header class="hero-banner">
+    <div class="topbar">
+      <a href="/diophantine_equation/html/linear-tasks.html" class="izzi-btn topbar-home-link">Назад</a>
+      <a href="/diophantine_equation/index.html" class="izzi-btn topbar-home-link">Головна</a>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Лінійне діофантове рівняння</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel highlight">
+      <div class="grid two">
+        <div class="card form-card">
+          <div class="linear-task-heading">
+            <h3 style="margin-top: 0;">Завдання</h3>
+            <fieldset class="linear-difficulty" aria-label="Складність завдання">
+              <label class="linear-difficulty-option">
+                <input type="radio" name="linearDifficulty" value="easy">
+                Легкий
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="linearDifficulty" value="medium" checked>
+                Середній
+              </label>
+              <label class="linear-difficulty-option">
+                <input type="radio" name="linearDifficulty" value="hard">
+                Важкий
+              </label>
+            </fieldset>
+          </div>
+          <div class="solution linear-task-work" id="linearTaskPanel">
+            <div id="equationDisplay" class="linear-equation-display">
+              <span id="equationText"></span>
+            </div>
+
+            <div id="taskSection">
+            <label id="gcdLabel">НСД(a, b) =
+              <input type="number" id="userGcd" step="1" min="-999" max="999" aria-label="НСД">
+            </label>
+            
+            <label id="conditionLabel">Остача від ділення =
+              <input type="number" id="userCondition" step="1" min="-999" max="999" aria-label="Остача від ділення">
+            </label>
+
+            <div id="conditionHoldsRow" class="linear-condition-holds" role="group" aria-label="Умова існування виконується">
+              <span class="linear-condition-holds-q">Умова існування виконується?</span>
+              <fieldset class="linear-condition-holds-options">
+                <label class="linear-condition-holds-option"><input type="radio" name="conditionHolds" value="yes"> Так</label>
+                <label class="linear-condition-holds-option"><input type="radio" name="conditionHolds" value="no"> Ні</label>
+              </fieldset>
+            </div>
+
+            <div id="linearSolutionFields">
+              <label>
+                <span class="linear-field-label-prefix">Частковий розв'язок x<span class="sub-idx">p</span> =</span>
+                <input type="number" id="userX0" step="1" aria-label="x під індексом p">
+              </label>
+
+              <label>
+                <span class="linear-field-label-prefix">Частковий розв'язок y<span class="sub-idx">p</span> =</span>
+                <input type="number" id="userY0" step="1" aria-label="y під індексом p">
+              </label>
+            </div>
+            
+            <div class="linear-task-footer">
+              <button type="button" class="primary-btn" id="checkBtn">Перевірити</button>
+              <button type="button" class="ghost-btn" id="hintBtn">Підказка</button>
+            </div>
+            </div>
+          </div>
+
+          <div id="resultSection" style="display: none;">
+            <div id="resultContent" class="solution"></div>
+            <button class="ghost-btn" id="newTaskBtn" style="margin-top: 12px; width: 100%;">Нове завдання</button>
+          </div>
+        </div>
+        
+        <div class="card result-card" id="solutionCard">
+          <h3>Приклад розвʼязання</h3>
+        <p>Нехай дано рівняння: <math><mn>2</mn><mi>x</mi> <mo>+</mo> <mn>3</mn><mi>y</mi> <mo>=</mo> <mn>5</mn></math></p>
+        <ol>
+            <li>
+                <math><mi>НСД</mi><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>3</mn><mtext>)</mtext></math> за алгоритмом Евкліда:<br>
+                <span class="math-step">1) <math><mn>3</mn> <mo>=</mo> <mn>1</mn></math>&times;<math><mn>2</mn> <mo>+</mo> <mn>1</mn></math></span><br>
+                <span class="math-step">2) <math><mn>2</mn> <mo>=</mo> <mn>2</mn></math>&times;<math><mn>1</mn> <mo>+</mo> <mn>0</mn></math></span><br>
+                Остання ненульова остача це <math><mn>1</mn></math>, тобто <math><mi>НСД</mi><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>3</mn><mtext>)</mtext><mo>=</mo><mn>1</mn></math>.
+            </li>
+          
+            <li>
+                Остача від ділення <math><mn>5</mn></math> на <math><mi>НСД</mi><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>3</mn><mtext>)</mtext></math>: <math><mn>5</mn> <mo>mod</mo> <mn>1</mn> <mo>=</mo> <mn>0</mn></math>. 
+            </li>
+            <li>
+                Оскільки <math><mn>5</mn></math> ділиться націло на <math><mi>НСД</mi><mtext>(</mtext><mn>2</mn><mo>,</mo><mn>3</mn><mtext>)</mtext></math>, умова існування цілочисельних розвʼязків виконується (відповідь «Так»).
+            </li>
+            
+            <li>
+                Для часткових розвʼязків виразимо <math><mi>НСД</mi></math> через початкові коефіцієнти:<br>
+                <span class="math-step"><math><mn>1</mn> <mo>=</mo> <mn>3</mn> <mo>-</mo> <mn>2</mn></math></span><br>
+                <span class="math-step"><math><mn>1</mn> <mo>=</mo> <mn>3</mn></math>&times;<math><mn>1</mn> <mo>+</mo><mn>2</mn></math>&times;<math><mtext>(</mtext><mo>-</mo><mn>1</mn><mtext>)</mtext></math></span><br>
+                Множимо обидві частини на <math><mn>5</mn></math>:<br>
+                <span class="math-step"><math><mn>5</mn> <mo>=</mo> <mn>3</mn></math>&times;<math><mn>5</mn> <mo>+</mo><mn>2</mn></math>&times;<math><mtext>(</mtext><mo>-</mo><mn>5</mn><mtext>)</mtext></math></span><br>
+                Отже, часткові розвʼязки: <span class="highlight"><math><msub><mi>x</mi><mi>p</mi></msub><mo>=</mo><mo>-</mo><mn>5</mn></math>, <math><msub><mi>y</mi><mi>p</mi></msub> <mo>=</mo> <mn>5</mn></math></span>.<br>
+                <div class="check-box">
+                    Перевірка: <math><mn>2</mn></math>&times;<math><mtext>(</mtext><mo>-</mo><mn>5</mn><mtext>)</mtext></math> + <math><mn>3</mn></math>&times;<math><mn>5</mn></math> = <math><mo>-</mo><mn>10</mn></math> + <math><mn>15</mn></math> = <math><mn>5</mn></math>.
+                </div>
+            </li>
+        </ol>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/diophantine_equation/js/script.js"></script>
+  <script src="/diophantine_equation/js/linear.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
