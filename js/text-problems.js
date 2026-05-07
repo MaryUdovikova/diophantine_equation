@@ -178,13 +178,13 @@ const checkTextProblem = () => {
   if (isCorrect) {
     showTextProblemResult(
       `<div style="color:#10b981;"><strong>Правильно!</strong></div>
-       <div style="margin-top:8px;">Перевірка: ${a}·${x} - ${b}·${y} = ${lhs}.</div>
+       <div style="margin-top:8px;">Перевірка: ${a}×${x} - ${b}×${y} = ${lhs}.</div>
        <div style="margin-top:8px;">Частковий розв’язок: xₚ = ${x}, yₚ = ${y}.</div>`
     );
   } else {
     const reason = !isNonNegative
       ? 'У контексті задачі кількість дій/покупок не може бути від’ємною.'
-      : `${a}·${x} - ${b}·${y} = ${lhs}, потрібно ${c}.`;
+      : `${a}×${x} - ${b}×${y} = ${lhs}, потрібно ${c}.`;
     showTextProblemResult(
       `<div style="color:#ef4444;">${ICON_FB_FAIL} Ваша відповідь: ${reason}</div>`
     );

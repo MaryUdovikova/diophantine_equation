@@ -97,17 +97,21 @@
 <p><strong>Знаходження всіх можливих (загальних) розв'язків</strong><br>
   Було знайдено один правильний варіант (10 виграшів і 10 програшів). Тепер підставимо всі відомі значення у формули для знаходження інших розв'язків:<br>
 <math><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>p</mn></msub><mo>+</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>НСД</mi></mrow></mfrac><mo>&times;</mo><mi>k</mi></math><br>
-<math><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>p</mn></msub><mo>-</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>НСД</mi></mrow></mfrac><mo>&times;</mo><mi>k</mi></math><br>
+<math><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>p</mn></msub><mo>+</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>НСД</mi></mrow></mfrac><mo>&times;</mo><mi>k</mi></math><br>
 Де <math><mi>a</mi></math> і <math><mi>b</mi></math> - це коефіцієнти при <math><mi>x</mi></math> і <math><mi>y</mi></math> відповідно, <math><mi>НСД</mi></math> - це найбільший спільний дільник, <math><msub><mi>x</mi><mn>p</mn></msub></math> і <math><msub><mi>y</mi><mn>p</mn></msub></math> - частковий розв'язок, а <math><mi>k</mi></math> - будь-яке ціле число. Підставляючи різні цілі числа замість <math><mi>k</mi></math>, ми отримуємо різні комбінації виграшів і програшів, які також задовольняють умову задачі.
 
 </p>
-<p>З нашого рівняння <math><mn>15</mn><mi>x</mi><mo>-</mo><mn>10</mn><mi>y</mi><mo>=</mo><mn>50</mn><mo>,</mo></math> <math><mi>a</mi><mo>=</mo><mn>15</mn><mo>,</mo></math> <math><mi>b</mi><mo>=</mo><mo>-</mo><mn>10</mn><mo>,</mo></math> <math><mi>НСД</mi><mo>=</mo><mn>5</mn><mo>,</mo></math> <math><msub><mi>x</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo></math> <math><msub><mi>y</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>.</mo></math> Підставляємо ці дані у формули:<br>
-<math><mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mfrac><mrow><mtext>(</mtext><mo>-</mo><mn>10</mn><mtext>)</mtext></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>-</mo><mn>2</mn><mi>k</mi></math><br>
-<math><mi>y</mi><mo>=</mo><mn>10</mn><mo>-</mo><mfrac><mrow><mn>15</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>-</mo><mn>3</mn><mi>k</mi></math><br>
+<p>З нашого рівняння <math><mn>15</mn><mi>x</mi><mo>-</mo><mn>10</mn><mi>y</mi><mo>=</mo><mn>50</mn><mo>,</mo></math> <math><mi>a</mi><mo>=</mo><mn>15</mn><mo>,</mo></math> <math><mi>b</mi><mo>=</mo><mn>10</mn><mo>,</mo></math> <math><mi>НСД</mi><mo>=</mo><mn>5</mn><mo>,</mo></math> <math><msub><mi>x</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>,</mo></math> <math><msub><mi>y</mi><mn>p</mn></msub><mo>=</mo><mn>10</mn><mo>.</mo></math> Підставляємо ці дані у формули:<br>
+<math><mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mfrac><mrow><mn>10</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>2</mn><mi>k</mi></math><br>
+<math><mi>y</mi><mo>=</mo><mn>10</mn><mo>+</mo><mfrac><mrow><mn>15</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>&times;</mo><mi>k</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>3</mn><mi>k</mi></math><br>
 Тепер, підставляючи замість <math><mi>k</mi></math> різні цілі числа, ми можемо розраховувати всі інші можливі розв'язки, однак вони повинні бути цілими і не від'ємними, бо неможливо мати від'ємну кількість виграшів або програшів:<br>
-Якщо <math><mi>k</mi><mo>=</mo><mn>1</mn></math>: <math><mi>x</mi><mo>=</mo><mn>8</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>7</mn></math> (програшів).<br>
-Якщо <math><mi>k</mi><mo>=</mo><mn>2</mn></math>: <math><mi>x</mi><mo>=</mo><mn>6</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>4</mn></math> (програшів).<br>
-Якщо <math><mi>k</mi><mo>=</mo><mn>3</mn></math>: <math><mi>x</mi><mo>=</mo><mn>4</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>1</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mo>-</mo><mn>1</mn></math>: <math><mi>x</mi><mo>=</mo><mn>8</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>7</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mo>-</mo><mn>2</mn></math>: <math><mi>x</mi><mo>=</mo><mn>6</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>4</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mo>-</mo><mn>3</mn></math>: <math><mi>x</mi><mo>=</mo><mn>4</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>1</mn></math> (програшів). - найменший можливий розв'язок, оскільки кількість перемог і програшів не може бути від'ємною.<br>
+Для будь-якого натурального числа <math><mi>k</mi></math> існує безліч розв'язків. Наприклад:<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>1</mn></math>: <math><mi>x</mi><mo>=</mo><mn>12</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>13</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>10</mn></math>: <math><mi>x</mi><mo>=</mo><mn>30</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>40</mn></math> (програшів).<br>
+Якщо <math><mi>k</mi><mo>=</mo><mn>13</mn></math>: <math><mi>x</mi><mo>=</mo><mn>36</mn></math> (виграшів), <math><mi>y</mi><mo>=</mo><mn>49</mn></math> (програшів). І так далі.<br>
 </p>
 
 <p><strong>Висновок</strong><br>
