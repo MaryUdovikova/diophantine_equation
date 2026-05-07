@@ -623,10 +623,10 @@ const finishHiperTask = () => {
     Оцінка: ${finalGrade} / 12
   </div>`;
 
-  resultHTML += `<div style="margin-top: 16px; padding: 12px; background: rgba(56, 189, 248, 0.1); border-radius: 8px;">
-    Всі можливі пари для k = ${hiperK}:<br>
-    ${hiperAllPairs.map(([x, y]) => `(${x}, ${y})`).join(', ')}
-  </div>`;
+  // resultHTML += `<div style="margin-top: 16px; padding: 12px; background: rgba(56, 189, 248, 0.1); border-radius: 8px;">
+  //   Всі можливі пари для k = ${hiperK}:<br>
+  //   ${hiperAllPairs.map(([x, y]) => `(${x}, ${y})`).join(', ')}
+  // </div>`;
 
   resultContent.innerHTML = resultHTML;
 
