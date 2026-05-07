@@ -340,7 +340,7 @@ const drawHiperPlane = () => {
     ctx.stroke();
   }
 
-  ctx.fillStyle = '#e5e7eb';
+  ctx.fillStyle = '#334155';
   ctx.font = '12px Inter';
   const xLabelY = Math.min(Math.max(origin.py - 8, 14), height - 8);
   ctx.fillText('x', width - 20, xLabelY);
