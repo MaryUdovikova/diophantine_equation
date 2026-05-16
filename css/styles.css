@@ -221,12 +221,12 @@ main {
 
 /* Головна: банер без фото — синій градієнт теми; картинка лише на фоні сторінки.
    Не ставити background-image: none після background — це знімає сам градієнт. */
-body.page-home .hero-banner-main {
+/* body.page-home .hero-banner-main {
   background: var(--hero-banner-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 
 body.page-home .hero-banner-main .topbar {
