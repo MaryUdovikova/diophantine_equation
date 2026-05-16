@@ -1355,6 +1355,9 @@ canvas {
     font-size: 1.05rem;
     margin-top: 0.4rem;
   }
+  .hero-title-main {
+    font-size: 36px;
+  }
   .hero-author {
     margin-top: 24px;
     font-size: 22px;
