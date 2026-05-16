@@ -253,6 +253,16 @@ body.page-home .hero-banner-main .hero-content {
   margin-top: 0;
 }
 
+.hero-title-main {
+  font-size: 72px;
+  color: white;
+  font-weight: 800;
+  line-height: 1.12;
+  margin-top: 0;
+  
+}
+
+
 .hero-content {
   position: relative;
   padding-bottom: 0;
