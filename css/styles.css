@@ -1358,6 +1358,9 @@ canvas {
   .hero-title-main {
     font-size: 36px;
   }
+  body.page-home .hero-banner-main {
+  padding: 64px;
+}
   .hero-author {
     margin-top: 24px;
     font-size: 22px;
