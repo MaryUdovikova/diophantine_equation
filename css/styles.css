@@ -233,16 +233,22 @@ body.page-home .hero-banner-main .topbar {
   padding-block: 0;
 }
 
+body.page-home .hero-banner-main {
+  padding: 64px;
+}
+
 body.page-home .hero-banner-main .hero-content {
   padding-top: 24px;
   padding-bottom: 24px;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .hero-banner-main .hero-content {
   min-height: 0;
   padding-top: 48px;
   padding-bottom: 24px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-banner-main .hero-title {
